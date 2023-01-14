@@ -1,9 +1,11 @@
 # fly-test
 
 ```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+sequenceDiagram
+    participant browser
+    participant server
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/
+    activate server
+    server-->>browser: HTML document
+    deactivate server
 ```
